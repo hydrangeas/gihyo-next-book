@@ -1,9 +1,7 @@
-import React from 'react';
-import { Button } from '@storybook/react/demo';
+import { Button } from '@storybook/react/demo'
+import React from 'react'
 
-export default { title: 'Button' };
-
-export const withText = () => <Button>Hello Button</Button>;
+export const withText = () => <Button>Hello Button</Button>
 
 export const withEmoji = () => (
   <Button>
@@ -11,4 +9,6 @@ export const withEmoji = () => (
       😀 😎 👍 💯
     </span>
   </Button>
-);
+)
+
+export default Button
