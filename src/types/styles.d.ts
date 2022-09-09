@@ -46,7 +46,7 @@ export type CSSPropertyAlignItems =
   | 'normal'
   | 'stretch'
   // コードの自動補完
-  | (string & {})
+  | (string & Record<never, never>)
 
 export type CSSPropertyAlignContent =
   | CSSPropertyGlobals
@@ -58,7 +58,7 @@ export type CSSPropertyAlignContent =
   | 'start'
   | 'baseline'
   | 'normal'
-  | (string & {})
+  | (string & Record<never, never>)
 
 export type CSSPropertyJustifyItems =
   | CSSPropertyGlobals
@@ -69,7 +69,7 @@ export type CSSPropertyJustifyItems =
   | 'normal'
   | 'right'
   | 'stretch'
-string & {}
+  | (string & Record<never, never>)
 
 export type CSSPropertyJustifyContent =
   | CSSPropertyGlobals
@@ -78,7 +78,7 @@ export type CSSPropertyJustifyContent =
   | 'left'
   | 'normal'
   | 'right'
-  | (string & {})
+  | (string & Record<never, never>)
 
 export type CSSPropertyFlexWrap =
   | CSSPropertyGlobals
@@ -102,7 +102,7 @@ export type CSSPropertyJustifySelf =
   | 'normal'
   | 'right'
   | 'stretch'
-  | (string & {})
+  | (string & Record<never, never>)
 
 export type CSSPropertyAlignSelf =
   | CSSPropertyGlobals
@@ -111,25 +111,31 @@ export type CSSPropertyAlignSelf =
   | 'baseline'
   | 'normal'
   | 'stretch'
-  | (string & {})
+  | (string & Record<never, never>)
 
 /**
  * Grid
  */
-type GridLine = 'auto' | (string & {})
+type GridLine = 'auto' | (string & Record<never, never>)
 
 export type CSSPropertyGridColumn =
   | CSSPropertyGlobals
   | GridLine
-  | (string & {})
+  | (string & Record<never, never>)
 
-export type CSSPropertyGridRow = CSSPropertyGlobals | GridLine | (string & {})
+export type CSSPropertyGridRow =
+  | CSSPropertyGlobals
+  | GridLine
+  | (string & Record<never, never>)
 
 export type CSSPropertyGridAutoFlow =
   | CSSPropertyGlobals
   | 'column'
   | 'dense'
   | 'row'
-  | (string & {})
+  | (string & Record<never, never>)
 
-export type CSSPropertyGridArea = CSSPropertyGlobals | GridLine | (string & {})
+export type CSSPropertyGridArea =
+  | CSSPropertyGlobals
+  | GridLine
+  | (string & Record<never, never>)
