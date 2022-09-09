@@ -18,7 +18,7 @@ type FlexProps = BoxProps & {
   alignItems?: Responsive<CSSPropertyAlignItems>
   alignContent?: Responsive<CSSPropertyAlignContent>
   justifyContent?: Responsive<CSSPropertyJustifyContent>
-  justifyItems?: Responsive<CSSPropertyJustifyContent>
+  justifyItems?: Responsive<CSSPropertyJustifyItems>
   flexWrap?: Responsive<CSSPropertyFlexWrap>
   flexBasis?: Responsive<string>
   flexDirection?: Responsive<CSSPropertyFlexDirection>
