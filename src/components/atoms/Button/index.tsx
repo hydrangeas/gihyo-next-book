@@ -41,7 +41,7 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   paddingLeft?: Responsive<Space>
   pseudoClass?: {
     hover?: {
-      backgroundColor?: Responsive<Color>      
+      backgroundColor?: Responsive<Color>
     }
     disabled?: {
       backgroundColor?: Responsive<Color>

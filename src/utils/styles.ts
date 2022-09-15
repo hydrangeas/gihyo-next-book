@@ -23,7 +23,7 @@ export type LineHeight = LineHeightThemeKeys | (string & {})
 const BREAKPOINTS: { [key: string]: string } = {
   sm: '640px',
   md: '768px',
-  ld: '1024px',
+  lg: '1024px',
   xl: '1280px',
 }
 
@@ -53,9 +53,26 @@ export function toPropValue<T>(
             theme,
           )};`,
         )
+      } else if (
+        responsiveKey === 'sm' ||
+        responsiveKey === 'md' ||
+        responsiveKey === 'lg' ||
+        responsiveKey === 'xl'
+      ) {
+        // メディアクエリでのスタイル
+        const breakpoint = BREAKPOINTS[responsiveKey]
+        const style = `${propKey}: ${toThemeValueIfNeeded(
+          propKey,
+          prop[responsiveKey],
+          theme,
+        )};`
+        result.push(`@media screen and (min-width: ${breakpoint}) {${style}}`)
       }
     }
+    return result.join('\n')
   }
+
+  return `${propKey}: ${toThemeValueIfNeeded(propKey, prop, theme)};`
 }
 
 const SPACE_KEYS = new Set([
@@ -73,7 +90,7 @@ const SPACE_KEYS = new Set([
 const COLOR_KEYS = new Set(['color', 'background-color'])
 const FONT_SIZE_KEYS = new Set(['font-size'])
 const LINE_SPACING_KEYS = new Set(['letter-spacing'])
-const LINE_HEIGHTS_KEYS = new Set(['line-height'])
+const LINE_HEIGHT_KEYS = new Set(['line-height'])
 
 /**
  *
@@ -114,11 +131,13 @@ function toThemeValueIfNeeded<T>(propKey: string, value: T, theme?: AppTheme) {
   } else if (
     theme &&
     theme.lineHeights &&
-    LINE_HEIGHTS_KEYS.has(propKey) &&
+    LINE_HEIGHT_KEYS.has(propKey) &&
     isLineHeightThemeKeys(value, theme)
   ) {
     return theme.lineHeights[value]
   }
+
+  return value
 }
 
 function isResponsivePropType<T>(prop: any): prop is ResponsiveProp<T> {
