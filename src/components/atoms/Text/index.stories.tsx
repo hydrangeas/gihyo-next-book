@@ -43,7 +43,7 @@ export default {
         },
       },
     },
-    lineheight: {
+    lineHeight: {
       control: { type: 'text' },
       description: '行の高さ',
       table: {
@@ -70,7 +70,7 @@ export default {
         },
       },
     },
-    m: {
+    margin: {
       control: { type: 'number' },
       description: 'マージン',
       table: {
@@ -79,7 +79,7 @@ export default {
         },
       },
     },
-    mt: {
+    marginTop: {
       control: { type: 'number' },
       description: 'マージントップ',
       table: {
@@ -88,7 +88,7 @@ export default {
         },
       },
     },
-    mr: {
+    marginRight: {
       control: { type: 'number' },
       description: 'マージンライト',
       table: {
@@ -97,7 +97,7 @@ export default {
         },
       },
     },
-    mb: {
+    marginBottom: {
       control: { type: 'number' },
       description: 'マージンボトム',
       table: {
@@ -106,7 +106,7 @@ export default {
         },
       },
     },
-    ml: {
+    marginLeft: {
       control: { type: 'number' },
       description: 'マージンレフト',
       table: {
@@ -115,7 +115,7 @@ export default {
         },
       },
     },
-    p: {
+    padding: {
       control: { type: 'number' },
       description: 'パディング',
       table: {
@@ -124,7 +124,7 @@ export default {
         },
       },
     },
-    pt: {
+    paddingTop: {
       control: { type: 'number' },
       description: 'パディングトップ',
       table: {
@@ -133,7 +133,7 @@ export default {
         },
       },
     },
-    pr: {
+    paddingRight: {
       control: { type: 'number' },
       description: 'パディングライト',
       table: {
@@ -142,7 +142,7 @@ export default {
         },
       },
     },
-    pb: {
+    paddingBottom: {
       control: { type: 'number' },
       description: 'パディングボトム',
       table: {
@@ -151,7 +151,7 @@ export default {
         },
       },
     },
-    pl: {
+    paddingLeft: {
       control: { type: 'number' },
       description: 'パディングレフト',
       table: {
@@ -166,13 +166,13 @@ export default {
 const Template: ComponentStory<typeof Text> = (args) => <Text {...args} />
 
 // サンプルテキスト
-const longText = `It is long established fact that a render will be
+const longText = `It is a long established fact that a reader will be
 distracted by the readable content of a page when looking at its layout.
 The point of using Lorem Ipsum is that it has a more-or-less normal
-distribution of letters, as opposed to using 'Content here, content here',
+distribution of letters, as opposed to using Content here, content here,
 making it look like readable English. Many desktop publishing packages and
 web page editors now use Lorem Ipsum as their default model text, and a
-search for 'lorem ipsum' will uncover many web sites still in their infancy.
+search for lorem ipsum will uncover many web sites still in their infancy.
 Various versions have evolved over the years, sometimes by accident, 
 sometimes on purpose (injected humour and the like).`
 

@@ -48,37 +48,31 @@ export type TextProps = {
 }
 
 const variants = {
-  // エクストラスモール
   extraSmall: {
     fontSize: 'extraSmall',
     letterSpacing: 0,
     lineHeight: 0,
   },
-  // スモール
   small: {
     fontSize: 'small',
     letterSpacing: 1,
     lineHeight: 1,
   },
-  // メディアム
   medium: {
     fontSize: 'medium',
     letterSpacing: 2,
     lineHeight: 2,
   },
-  // メディアムラージ
   mediumLarge: {
     fontSize: 'mediumLarge',
     letterSpacing: 3,
     lineHeight: 3,
   },
-  // ラージ
   large: {
     fontSize: 'large',
     letterSpacing: 4,
     lineHeight: 4,
   },
-  // エクストララージ
   extraLarge: {
     fontSize: 'extraLarge',
     letterSpacing: 5,
@@ -95,13 +89,14 @@ const Text = styled.span<TextProps>`
     // バリアントのスタイルの適用
     if (variant && variants[variant]) {
       const styles = []
-      !fontSize && styles.push(toPropValue('fontSize', variants[variant].fontSize, theme))
-      !letterSpacing && styles.push(toPropValue('letterSpacing', variants[variant].letterSpacing, theme))
-      !lineHeight && styles.push(toPropValue('lineHeight', variants[variant].lineHeight, theme))
+      !fontSize && styles.push(toPropValue('font-size', variants[variant].fontSize, theme))
+      !letterSpacing && styles.push(toPropValue('letter-spacing', variants[variant].letterSpacing, theme))
+      !lineHeight && styles.push(toPropValue('line-height', variants[variant].lineHeight, theme))
       return styles.join('\n')
     }
   }}
   ${(props) => toPropValue('font-size', props.fontSize, props.theme)}
+  ${(props) => toPropValue('font-weight', props.fontWeight, props.theme)}
   ${(props) => toPropValue('letter-spacing', props.letterSpacing, props.theme)}
   ${(props) => toPropValue('line-height', props.lineHeight, props.theme)}
   ${(props) => toPropValue('color', props.color, props.theme)}
