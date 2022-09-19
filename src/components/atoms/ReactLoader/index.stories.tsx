@@ -1,26 +1,30 @@
-import ContentLoader from 'react-content-loader'
-import type { IContentLoaderProps } from 'react-content-loader'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
+import RectLoader from './index'
 
-interface RectLoaderProps extends IContentLoaderProps {
-  width: number
-  height: number
-}
+export default {
+  title: 'Atoms/RectLoader',
+  argTypes: {
+    width: {
+      control: { type: 'number' },
+      defaultValue: 320,
+      description: '横幅',
+      table: {
+        type: { summary: 'number' },
+      },
+    },
+    height: {
+      control: { type: 'number' },
+      description: '縦幅',
+      defaultValue: 320,
+      table: {
+        type: { summary: 'number' },
+      },
+    },
+  },
+} as ComponentMeta<typeof RectLoader>
 
-/**
- * レクトローダー
- */
-const RectLoader = ({ width, height, ...rest }: RectLoaderProps) => (
-  <ContentLoader
-    speed={2}
-    width={width}
-    height={height}
-    viewBox={`0 0 ${width} ${height}`}
-    backgroundColor="#f3f3f3"
-    foregroundColor="#ecebeb"
-    {...rest}
-  >
-    <rect x="0" y="0" rx="0" ry="0" width={width} height={height} />
-  </ContentLoader>
+const Template: ComponentStory<typeof RectLoader> = (args) => (
+  <RectLoader {...args} />
 )
 
-export default RectLoader
+export const Normal = Template.bind({})
