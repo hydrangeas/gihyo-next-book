@@ -49,6 +49,7 @@ const CheckBox = (props: CheckBoxProps) => {
   return (
     <>
       <CheckBoxElement
+        {...rest}
         id={id}
         ref={ref}
         type="checkbox"
