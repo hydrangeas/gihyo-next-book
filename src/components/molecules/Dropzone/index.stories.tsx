@@ -61,7 +61,7 @@ const Template: ComponentStory<typeof Dropzone> = (args) => {
   }
 
   const fetchData = async () => {
-    const res = await fetch('/images/sample/1.jpg')
+    const res = await fetch('/1.jpg')
     const blob = await res.blob()
     const file = new File([blob], '1.png', blob)
 
