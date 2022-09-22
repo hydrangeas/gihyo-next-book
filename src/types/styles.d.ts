@@ -1,14 +1,13 @@
+/* eslint-disable @typescript-eslint/ban-types */
 /**
  * Responsiveプロパティ
- * CSSプロパティの値をブレークポイントごとに設定できる
- * TはCSSプロパティの値の型
  */
 export type ResponsiveProp<T> = {
-  base?: T //デフォルト
-  sm?: T // 640px以上
-  md?: T // 768px以上
-  lg?: T // 1024px以上
-  xl?: T // 1280px以上
+  base?: T
+  sm?: T
+  md?: T
+  lg?: T
+  xl?: T
 }
 export type Responsive<T> = T | ResponsiveProp<T>
 
@@ -46,19 +45,19 @@ export type CSSPropertyAlignItems =
   | 'normal'
   | 'stretch'
   // コードの自動補完
-  | (string & Record<never, never>)
+  | (string & {})
 
 export type CSSPropertyAlignContent =
   | CSSPropertyGlobals
   | ContentDistribution
-  | 'cednter'
+  | 'center'
   | 'end'
   | 'flex-end'
   | 'flex-start'
   | 'start'
   | 'baseline'
   | 'normal'
-  | (string & Record<never, never>)
+  | (string & {})
 
 export type CSSPropertyJustifyItems =
   | CSSPropertyGlobals
@@ -69,7 +68,7 @@ export type CSSPropertyJustifyItems =
   | 'normal'
   | 'right'
   | 'stretch'
-  | (string & Record<never, never>)
+  | (string & {})
 
 export type CSSPropertyJustifyContent =
   | CSSPropertyGlobals
@@ -78,7 +77,7 @@ export type CSSPropertyJustifyContent =
   | 'left'
   | 'normal'
   | 'right'
-  | (string & Record<never, never>)
+  | (string & {})
 
 export type CSSPropertyFlexWrap =
   | CSSPropertyGlobals
@@ -102,7 +101,7 @@ export type CSSPropertyJustifySelf =
   | 'normal'
   | 'right'
   | 'stretch'
-  | (string & Record<never, never>)
+  | (string & {})
 
 export type CSSPropertyAlignSelf =
   | CSSPropertyGlobals
@@ -111,31 +110,25 @@ export type CSSPropertyAlignSelf =
   | 'baseline'
   | 'normal'
   | 'stretch'
-  | (string & Record<never, never>)
+  | (string & {})
 
 /**
  * Grid
  */
-type GridLine = 'auto' | (string & Record<never, never>)
+type GridLine = 'auto' | (string & {})
 
 export type CSSPropertyGridColumn =
   | CSSPropertyGlobals
   | GridLine
-  | (string & Record<never, never>)
+  | (string & {})
 
-export type CSSPropertyGridRow =
-  | CSSPropertyGlobals
-  | GridLine
-  | (string & Record<never, never>)
+export type CSSPropertyGridRow = CSSPropertyGlobals | GridLine | (string & {})
 
 export type CSSPropertyGridAutoFlow =
   | CSSPropertyGlobals
   | 'column'
   | 'dense'
   | 'row'
-  | (string & Record<never, never>)
+  | (string & {})
 
-export type CSSPropertyGridArea =
-  | CSSPropertyGlobals
-  | GridLine
-  | (string & Record<never, never>)
+export type CSSPropertyGridArea = CSSPropertyGlobals | GridLine | (string & {})
