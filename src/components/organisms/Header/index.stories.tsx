@@ -17,7 +17,7 @@ export const Login = () => {
     username: 'dummy',
     displayName: 'Taketo Yoshida',
     email: 'test@example.com',
-    profileImageUrl: '/images/sample/1.jpg',
+    profileImageUrl: '/1.jpg',
     description: '',
   }
 
@@ -30,7 +30,7 @@ export const Login = () => {
         category: 'book',
         title: 'Product',
         description: '',
-        imageUrl: '/images/sample/1.jpg',
+        imageUrl: '/1.jpg',
         blurDataUrl: '',
         price: 1000,
         condition: 'used',

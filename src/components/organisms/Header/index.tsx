@@ -107,7 +107,7 @@ const Header = () => {
                   icon={<ShoppingCartIcon size={24} />}
                   size="24px"
                   badgeContent={cart.length === 0 ? undefined : cart.length}
-                  badgeBackgroundColor="primary"
+                  badgeBackgroundColor="#007bff"//primary
                 />
               </Anchor>
             </Link>
