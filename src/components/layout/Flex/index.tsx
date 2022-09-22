@@ -35,16 +35,16 @@ type FlexProps = BoxProps & {
  */
 const Flex = styled(Box)<FlexProps>`
   ${(props) => toPropValue('align-items', props.alignItems, props.theme)}
-  ${(props) => toPropValue('alignContent', props.alignContent, props.theme)}
-  ${(props) => toPropValue('justifyContent', props.justifyContent , props.theme)}
-  ${(props) => toPropValue('justifyItems', props.justifyItems, props.theme)}
-  ${(props) => toPropValue('flexWrap', props.flexWrap, props.theme)}
-  ${(props) => toPropValue('flexBasis', props.flexBasis, props.theme)}
-  ${(props) => toPropValue('flexDirection', props.flexDirection, props.theme)}
-  ${(props) => toPropValue('flexGrow', props.flexGrow, props.theme)}
-  ${(props) => toPropValue('flexShrink', props.flexShrink, props.theme)}
-  ${(props) => toPropValue('justifySelf', props.justifySelf, props.theme)}
-  ${(props) => toPropValue('alignSelf', props.alignSelf, props.theme)}
+  ${(props) => toPropValue('align-content', props.alignContent, props.theme)}
+  ${(props) => toPropValue('justify-content', props.justifyContent , props.theme)}
+  ${(props) => toPropValue('justify-items', props.justifyItems, props.theme)}
+  ${(props) => toPropValue('flex-wrap', props.flexWrap, props.theme)}
+  ${(props) => toPropValue('flex-basis', props.flexBasis, props.theme)}
+  ${(props) => toPropValue('flex-direction', props.flexDirection, props.theme)}
+  ${(props) => toPropValue('flex-grow', props.flexGrow, props.theme)}
+  ${(props) => toPropValue('flex-shrink', props.flexShrink, props.theme)}
+  ${(props) => toPropValue('justify-self', props.justifySelf, props.theme)}
+  ${(props) => toPropValue('align-self', props.alignSelf, props.theme)}
   ${(props) => toPropValue('order', props.order, props.theme)}
 `
 
