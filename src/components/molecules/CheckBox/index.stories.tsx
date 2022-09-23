@@ -1,6 +1,4 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import React, { useState } from 'react'
-import Box from '../../layout/Box'
 import CheckBox from './index'
 
 export default {

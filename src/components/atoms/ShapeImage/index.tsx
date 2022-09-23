@@ -15,7 +15,7 @@ const ImageWithShape = styled(Image)<{ shape?: ImageShape }>`
 const ShapeImage = (props: ShapeImageProps) => {
   const { shape, ...imageProps } = props
 
-  return <ImageWithShape shape={shape} {...props} />
+  return <ImageWithShape shape={shape} {...imageProps} />
 }
 
 export default ShapeImage
