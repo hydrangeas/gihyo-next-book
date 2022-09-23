@@ -18,7 +18,7 @@ export type SigninParam = {
 
 /**
  * 認証API（サインイン）
- * @param context APIコンテキストt
+ * @param context APIコンテキスト
  * @param params パラメータ
  * @returns ログインユーザー
  */
